@@ -21,6 +21,9 @@ public class Auto {
     }
     public String verificarIntegridad() {
         for (Asiento asiento : asientos) {
+            if (asiento==null) {
+                continue;
+            }
             if (asiento != null && asiento.registro == this.registro && asiento.registro  == this.motor.registro){
                 continue;
             } else {
